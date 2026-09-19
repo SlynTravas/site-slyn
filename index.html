@@ -1,51 +1,701 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Slyn Travas | Travas de Segurança para Ganchos</title>
+<title>Slyn Travas | Travas de Segurança para Ganchos</title>
 
-  <meta name="description" content="Slyn Travas: soluções em travas de segurança para ganchos de içamento, Munck, moitões e catracas. Desenvolvimento e fabricação de soluções para diferentes aplicações.">
+<meta name="description" content="Slyn Travas: soluções em travas de segurança para ganchos de içamento, Munck, moitões e catracas.">
 
-  <meta name="keywords" content="trava de segurança para gancho, trava para gancho, trava de gancho, trava de segurança, gancho de içamento, gancho Munck, trava Munck, moitão, catraca, gancho olhal, Slyn Travas">
+<style>
+:root{
+  --bg:#061522;
+  --bg2:#0a2030;
+  --card:#0d2638;
+  --blue:#168bd0;
+  --cyan:#20d8ff;
+  --white:#ffffff;
+  --text:#dceaf2;
+  --muted:#9db3c0;
+}
 
-  <meta name="author" content="Slyn Travas">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#061522">
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-  <meta property="og:title" content="Slyn Travas | Travas de Segurança para Ganchos">
-  <meta property="og:description" content="Soluções em travas de segurança para ganchos de içamento, Munck, moitões e catracas.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://slyntravas.github.io/site-slyn/">
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(32,216,255,.12),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(22,139,208,.10),transparent 30%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
 
-  <link rel="canonical" href="https://slyntravas.github.io/site-slyn/">
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(6,21,34,.95);
+  border-bottom:1px solid rgba(32,216,255,.25);
+}
 
-  <style>
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
 
-    :root {
-      --bg: #061522;
-      --bg2: #091d2c;
-      --card: #0d2638;
-      --blue: #168bd0;
-      --cyan: #20d8ff;
-      --white: #ffffff;
-      --text: #dceaf2;
-      --muted: #9db3c0;
-      --border: rgba(32,216,255,0.22);
-    }
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:white;
+}
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+.logo span{
+  color:var(--cyan);
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(32,216,255,0.12), transparent 25%),
-        radial-gradient(circle at 80% 30%, rgba(22,139,208,0.10), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      line
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:var(--cyan);
+}
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  padding:90px 25px;
+}
+
+.hero-content{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+}
+
+.tag{
+  display:inline-block;
+  border:1px solid rgba(32,216,255,.3);
+  color:var(--cyan);
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+h1{
+  max-width:900px;
+  font-size:clamp(40px,7vw,76px);
+  line-height:1.05;
+  margin:22px 0;
+  color:white;
+}
+
+h1 span{
+  color:var(--cyan);
+}
+
+.hero p{
+  max-width:720px;
+  font-size:20px;
+  color:var(--muted);
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.button{
+  display:inline-block;
+  padding:14px 23px;
+  border-radius:7px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.primary{
+  background:var(--cyan);
+  color:#03121c;
+}
+
+.secondary{
+  border:1px solid rgba(32,216,255,.3);
+  color:white;
+}
+
+section{
+  padding:85px 25px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  margin-bottom:45px;
+}
+
+.section-title small{
+  color:var(--cyan);
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  margin:8px 0;
+  color:white;
+  font-size:38px;
+}
+
+.section-title p{
+  max-width:750px;
+  color:var(--muted);
+}
+
+.about{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-text{
+  font-size:18px;
+  color:var(--muted);
+}
+
+.highlight{
+  border-left:3px solid var(--cyan);
+  padding-left:25px;
+  font-size:22px;
+  color:white;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:linear-gradient(145deg,rgba(13,38,56,.95),rgba(8,27,42,.95));
+  border:1px solid rgba(32,216,255,.22);
+  border-radius:12px;
+  padding:28px;
+}
+
+.card h3{
+  margin-top:0;
+  color:var(--cyan);
+  font-size:24px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+.solutions{
+  background:rgba(3,15,25,.65);
+}
+
+.solution-box{
+  border:1px solid rgba(32,216,255,.22);
+  border-radius:16px;
+  padding:45px;
+  background:linear-gradient(120deg,rgba(22,139,208,.15),rgba(32,216,255,.04)),var(--card);
+}
+
+.solution-box h3{
+  font-size:30px;
+  color:white;
+}
+
+.solution-box strong{
+  color:var(--cyan);
+}
+
+.institutional{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.values{
+  padding-left:20px;
+  color:var(--muted);
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  max-width:800px;
+  margin:auto;
+  padding:45px;
+  border:1px solid rgba(32,216,255,.22);
+  border-radius:16px;
+  background:var(--card);
+}
+
+.contact-box h2{
+  color:white;
+  font-size:35px;
+}
+
+.contact-box p{
+  color:var(--muted);
+}
+
+.contact-links{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.social{
+  margin-top:20px;
+  color:var(--cyan);
+  font-weight:bold;
+}
+
+footer{
+  border-top:1px solid rgba(32,216,255,.22);
+  padding:40px 25px;
+  text-align:center;
+  background:#030d15;
+}
+
+footer strong{
+  color:white;
+  font-size:20px;
+}
+
+footer p{
+  color:var(--muted);
+}
+
+@media(max-width:800px){
+
+  .nav{
+    flex-direction:column;
+  }
+
+  nav{
+    justify-content:center;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:70px;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .institutional{
+    grid-template-columns:1fr;
+  }
+
+  .solution-box{
+    padding:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">
+SLYN <span>TRAVAS</span>
+</div>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">A Slyn</a>
+<a href="#modelos">Modelos</a>
+<a href="#solucoes">Soluções</a>
+<a href="#tecnico">Conteúdo técnico</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<span class="tag">SLYN TRAVAS</span>
+
+<h1>
+Soluções em <span>travas de segurança</span> para ganchos.
+</h1>
+
+<p>
+Desenvolvimento e fabricação de travas de segurança para
+diferentes aplicações de içamento, incluindo ganchos,
+Munck, moitões e catracas.
+</p>
+
+<div class="buttons">
+
+<a class="button primary" href="#modelos">
+Conheça nossos modelos
+</a>
+
+<a class="button secondary" href="#solucoes">
+Encontre sua solução
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<div class="container">
+
+<div class="section-title">
+<small>SOBRE A SLYN</small>
+<h2>Segurança que acompanha sua operação.</h2>
+</div>
+
+<div class="about">
+
+<div class="about-text">
+
+<p>
+A Slyn é uma empresa brasileira especializada no
+desenvolvimento e fabricação de travas de segurança
+para ganchos de içamento.
+</p>
+
+<p>
+Nossos produtos são desenvolvidos buscando segurança,
+confiabilidade, durabilidade e adequação às diferentes
+aplicações encontradas nas operações.
+</p>
+
+</div>
+
+<div class="highlight">
+Pequena no tamanho.<br>
+<strong>Gigante na segurança.</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="modelos">
+
+<div class="container">
+
+<div class="section-title">
+<small>NOSSOS MODELOS</small>
+<h2>Travas Slyn</h2>
+
+<p>
+Uma linha desenvolvida para diferentes aplicações e
+necessidades de segurança em ganchos.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>ST 0050</h3>
+<p>
+Trava de segurança Slyn para aplicações compatíveis.
+</p>
+</div>
+
+<div class="card">
+<h3>ST 0075</h3>
+<p>
+Ideal para aplicações em catracas e moitões.
+</p>
+</div>
+
+<div class="card">
+<h3>ST 0100</h3>
+<p>
+Ideal para aplicações em moitões e catracas.
+</p>
+</div>
+
+<div class="card">
+<h3>ST 0500</h3>
+<p>
+Desenvolvida para ganchos de caminhões Munck.
+</p>
+</div>
+
+<div class="card">
+<h3>ST 0750</h3>
+<p>
+Desenvolvida para ganchos de caminhões Munck.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="solutions" id="solucoes">
+
+<div class="container">
+
+<div class="solution-box">
+
+<h3>
+Não encontrou a trava que precisa?
+</h3>
+
+<p>
+<strong>Fale com a Slyn.</strong>
+</p>
+
+<p>
+Desenvolvemos soluções em travas de segurança para
+diferentes aplicações, buscando atender às necessidades
+específicas de cada operação.
+</p>
+
+<div class="buttons">
+
+<a class="button primary"
+href="https://wa.me/5571984668282"
+target="_blank">
+Falar com a Slyn
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tecnico">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>CONHECIMENTO</small>
+
+<h2>Conteúdo técnico</h2>
+
+<p>
+Informação para ajudar profissionais a entender,
+especificar, inspecionar e utilizar corretamente
+travas de segurança para ganchos.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Funcionamento</h3>
+<p>
+Entenda a função da trava de segurança e sua atuação
+no conjunto do gancho.
+</p>
+</div>
+
+<div class="card">
+<h3>Inspeção</h3>
+<p>
+Orientações sobre inspeção visual e verificação
+funcional dos componentes.
+</p>
+</div>
+
+<div class="card">
+<h3>Aplicações</h3>
+<p>
+Conheça aplicações em Munck, moitões, catracas
+e diferentes equipamentos de içamento.
+</p>
+</div>
+
+<div class="card">
+<h3>Materiais</h3>
+<p>
+Conheça os materiais e características consideradas
+no desenvolvimento das soluções Slyn.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<small>PRINCÍPIOS SLYN</small>
+
+<h2>Engenharia, segurança e compromisso.</h2>
+
+</div>
+
+<div class="institutional">
+
+<div class="card">
+
+<h3>Missão</h3>
+
+<p>
+Desenvolver e fabricar travas de segurança com
+excelência, oferecendo soluções confiáveis que
+elevem a segurança, reduzam custos de manutenção
+e agreguem valor às operações de içamento.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Visão</h3>
+
+<p>
+Ser referência nacional em travas de segurança
+para ganchos, reconhecida pela qualidade,
+inovação e confiança dos clientes.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Valores</h3>
+
+<ul class="values">
+<li>Segurança em primeiro lugar.</li>
+<li>Qualidade inegociável.</li>
+<li>Ética e transparência.</li>
+<li>Compromisso com o cliente.</li>
+<li>Inovação contínua.</li>
+<li>Excelência na fabricação.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contato">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Fale com a Slyn</h2>
+
+<p>
+Precisa de uma trava de segurança para seu gancho?
+Quer encontrar um modelo específico ou desenvolver
+uma solução para sua aplicação?
+</p>
+
+<div class="contact-links">
+
+<a class="button primary"
+href="https://wa.me/5571984668282"
+target="_blank">
+WhatsApp
+</a>
+
+<a class="button secondary"
+href="mailto:slyntravas@gmail.com">
+E-mail
+</a>
+
+</div>
+
+<div class="social">
+Instagram: @slyntravas
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<strong>SLYN TRAVAS</strong>
+
+<p>
+Soluções em travas de segurança para ganchos.
+</p>
+
+<p>
+Atendimento para todo o Brasil.
+</p>
+
+<p>
+© 2026 Slyn Travas — Todos os direitos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
